@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/login-style.css" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Bulk Api Management</span></div>
+		</div>
+		<br>
+		<div class="login">	
+		
+      <form action="/home" method="POST">
+		<table><tr><td><input type="text" placeholder="username" name="username" required="true"> </td></tr>
+		<tr><td><input type="password" placeholder="password" name="password" required="true"><br></td></tr>
+		</table>
+		<div>Input json file contains Application Names and API Names</div>		
+		<textarea class="scrollabletextbox" placeholder="{&#x0a;'applications': ['partner-moto'],&#x0a;'apis': ['myvoice-api'],&#x0a;'environment': 'QA'&#x0a;}" required="true" name="applicationNames" rows="20" cols="200"></textarea>
+
+		<br/>
+        <button type="submit">Provision</button><br/>		
+		</table>
+		<table>
+		   <tr>
+			  <th>Status</th>
+		   </tr>
+			<tr>
+			  <td><%= successfulAPIs %></td>			  
+			</tr>    
+		   
+		</table>
+      </form>
+		</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+</body>
+
+</html>
